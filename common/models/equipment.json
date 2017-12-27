@@ -1,0 +1,33 @@
+{
+  "name": "equipment",
+  "plural": "equipments",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "equipmentName": {
+      "type": "string",
+      "required": true
+    },
+    "equipmentDescription": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "models": {
+      "type": "hasMany",
+      "model": "model",
+      "foreignKey": ""
+    },
+    "repairs": {
+      "type": "hasMany",
+      "model": "repair",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

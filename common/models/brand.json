@@ -1,0 +1,33 @@
+{
+  "name": "brand",
+  "plural": "brands",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "brandName": {
+      "type": "string",
+      "required": true
+    },
+    "brandDescription": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "models": {
+      "type": "hasMany",
+      "model": "model",
+      "foreignKey": ""
+    },
+    "repairs": {
+      "type": "hasMany",
+      "model": "repair",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

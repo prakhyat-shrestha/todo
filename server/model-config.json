@@ -1,0 +1,70 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "customer": {
+    "dataSource": "db",
+    "public": true
+  },
+  "repair": {
+    "dataSource": "db",
+    "public": true
+  },
+  "state": {
+    "dataSource": "db",
+    "public": true
+  },
+  "brand": {
+    "dataSource": "db",
+    "public": true
+  },
+  "model": {
+    "dataSource": "db",
+    "public": true
+  },
+  "employee": {
+    "dataSource": "db",
+    "public": true
+  },
+  "equipment": {
+    "dataSource": "db",
+    "public": true
+  },
+  "detail": {
+    "dataSource": "db",
+    "public": true
+  }
+}

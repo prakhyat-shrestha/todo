@@ -1,0 +1,86 @@
+{
+  "name": "repair",
+  "plural": "repairs",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "billNo": {
+      "type": "number",
+      "required": true
+    },
+    "dateReceived": {
+      "type": "date",
+      "required": false
+    },
+    "dateReturned": {
+      "type": "date"
+    },
+    "serialNo": {
+      "type": "string",
+      "default": "N.A."
+    },
+    "problem": {
+      "type": "string",
+      "default": "N.A."
+    },
+    "estimatedPrice": {
+      "type": "number",
+      "default": "0"
+    },
+    "chargedPrice": {
+      "type": "number",
+      "default": "0"
+    },
+    "note": {
+      "type": "string",
+      "default": "N.A."
+    },
+    "description": {
+      "type": "string",
+      "default": "N.A."
+    }
+  },
+  "validations": [],
+  "relations": {
+    "customer": {
+      "type": "belongsTo",
+      "model": "customer",
+      "foreignKey": ""
+    },
+    "state": {
+      "type": "belongsTo",
+      "model": "state",
+      "foreignKey": ""
+    },
+    "brand": {
+      "type": "belongsTo",
+      "model": "brand",
+      "foreignKey": ""
+    },
+    "equipment": {
+      "type": "belongsTo",
+      "model": "equipment",
+      "foreignKey": ""
+    },
+    "model": {
+      "type": "belongsTo",
+      "model": "model",
+      "foreignKey": ""
+    },
+    "employee": {
+      "type": "belongsTo",
+      "model": "employee",
+      "foreignKey": ""
+    },
+    "details": {
+      "type": "hasOne",
+      "model": "detail",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
